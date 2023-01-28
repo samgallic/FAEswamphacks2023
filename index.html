@@ -1,21 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><!--Webpage Title Goes Here--></title>
-</head>
-<body>
 
-  <p class="fall">
-  WAKE UP!!!
-  </p>
-  <!-- Text goes here-->
-  
-</body>
-</html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!--Webpage Title Goes Here--></title>
+    <title>Choose Your Own Adventure</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: black;
+      }
+
+      h1 {
+        margin-top: 50px;
+        font-size: 36px;
+        color:azure;
+      }
+
+      p {
+        margin-top: 30px;
+        font-size: 24px;
+        color:azure;
+      }
+
+      button {
+        margin-top: 30px;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: lightblue;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Choose Your Own Adventure</h1>
+    <p id="story">You are a adventurer, and you come to a fork in the road. Do you want to go left or right?</p>
+    <button id="left">Go Left</button>
+    <button id="right">Go Right</button>
+
+    <script>
+      const story = document.querySelector("#story");
+      const leftBtn = document.querySelector("#left");
+      const rightBtn = document.querySelector("#right");
+
+      leftBtn.addEventListener("click", function() {
+        story.innerHTML = "You have chosen to go left. You encounter a dragon. Do you want to fight or run?";
+        leftBtn.innerHTML = "Fight";
+        rightBtn.innerHTML = "Run";
+
+        leftBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to fight the dragon. The dragon breathes fire and you die.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+
+        rightBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to run from the dragon. You successfully escape and find a treasure.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+      });
+
+      rightBtn.addEventListener("click", function() {
+        story.innerHTML = "You have chosen to go right. You find a treasure chest. Do you want to open it or leave it?";
+        leftBtn.innerHTML = "Open";
+        rightBtn.innerHTML = "Leave";
+
+        leftBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to open the treasure chest. You find a valuable diamond inside.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+
+        rightBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to leave the treasure chest. You continue on your journey without it.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+      });
+    </script>
+  </body>
