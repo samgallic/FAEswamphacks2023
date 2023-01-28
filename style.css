@@ -34,3 +34,19 @@ button {
 button:hover {
   background-color: rgb(122, 153, 163);
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.fall {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 4500px;
+}
