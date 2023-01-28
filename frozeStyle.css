@@ -1,0 +1,10 @@
+
+body {
+    display: flex;
+    text-align: center;
+    font-family: 'VT323', sans-serif;
+    font-size: 24px;
+    color: red;
+    background-color: black;
+    margin: 0;
+  }
