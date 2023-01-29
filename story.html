@@ -39,6 +39,11 @@
         document.body.style.backgroundPosition = "top center";
       }
 
+      if ((rightBtn.value == "") && (currentSlide != 0))
+        rightBtn.style.display = "none";   
+      if (righterBtn.value == "")
+        righterBtn.style.display = "none";        
+
       leftBtn.addEventListener("click", function() {
         if (currentSlide == 0) {
           granola = false;
@@ -58,6 +63,7 @@
         slideData = storySlides[currentSlide];
         image_path = imageSlides[currentSlide];
         setBackground();
+
         story.innerHTML = slideData[0];
         leftBtn.innerHTML = slideData[1];
         rightBtn.innerHTML = "";
@@ -65,21 +71,21 @@
 
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
+          rightBtn.style.display = "";
         }
         if (slideData.length > 5){
           righterBtn.innerHTML = slideData[5];
+          righterBtn.style.display = "";
         }
 
-        
-
         if (currentSlide == 5 && keys)
-          rightBtn.innerHTML = "Use your car keys to unlock the car."
+          rightBtn.innerHTML = "Use your car keys to unlock the car.";
         if (currentSlide == 24 && granola)
-          rightBtn.innerHTML = "Eat your granola bar! Yim yum!."
+          rightBtn.innerHTML = "Eat your granola bar! Yim yum!.";
         if (currentSlide == 29 && knife)
           rightBtn.innerHTML = "Kill em all"
         if (currentSlide == 33 && knife)
-          rightBtn.innerHTML = "Free him WITH A KNIFE!!!"
+          rightBtn.innerHTML = "Free him WITH A KNIFE!!!";
         if (currentSlide == 6) {
           granola = true;
           storySlides[currentSlide][0] = "You already took the granola bar.";
@@ -127,10 +133,13 @@
 
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
+          righterBtn.style.display = "";
         }
         if (slideData.length > 5){
           righterBtn.innerHTML = slideData[5];
+          righterBtn.style.display = "";
         }
+
         if (currentSlide == 5 && keys)
           rightBtn.innerHTML = "Use your car keys to unlock the car."
         if (currentSlide == 24 && granola)
@@ -176,10 +185,13 @@
 
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
+          rightBtn.style.display = "";
         }
         if (slideData.length > 5){
           righterBtn.innerHTML = slideData[5];
+          righterBtn.style.display = "";
         }
+
         if (currentSlide == 5 && keys)
           rightBtn.innerHTML = "Use your car keys to unlock the car."
         if (currentSlide == 24 && granola)
