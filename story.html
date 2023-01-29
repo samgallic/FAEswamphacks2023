@@ -87,15 +87,15 @@
           rightBtn.style.display = "";
         }
         if (currentSlide == 24 && granola) {
-          rightBtn.innerHTML = "Eat your granola bar! Yim yum!.";
+          rightBtn.innerHTML = "Eat your granola bar!";
           rightBtn.style.display = "";
         }
         if (currentSlide == 29 && knife) {
-          rightBtn.innerHTML = "Kill em all";
+          rightBtn.innerHTML = "Fight them off with your knife.";
           rightBtn.style.display = "";
         }
         if (currentSlide == 33 && knife) {
-          rightBtn.innerHTML = "Free him WITH A KNIFE!!!";
+          rightBtn.innerHTML = "Free Marlo with you knife.";
           rightBtn.style.display = "";
         }
         if (currentSlide == 6) {
@@ -163,15 +163,15 @@
           rightBtn.style.display = "";
         }
         if (currentSlide == 24 && granola) {
-          rightBtn.innerHTML = "Eat your granola bar! Yim yum!.";
+          rightBtn.innerHTML = "Eat your granola bar!";
           rightBtn.style.display = "";
         }
         if (currentSlide == 29 && knife) {
-          rightBtn.innerHTML = "Kill em all";
+          rightBtn.innerHTML = "Fight them off with your knife.";
           rightBtn.style.display = "";
         }
         if (currentSlide == 33 && knife) {
-          rightBtn.innerHTML = "Free him WITH A KNIFE!!!";
+          rightBtn.innerHTML = "Free Marlo with you knife.";
           rightBtn.style.display = "";
         }
         if (currentSlide == 6) {
@@ -229,15 +229,15 @@
           rightBtn.style.display = "";
         }
         if (currentSlide == 24 && granola) {
-          rightBtn.innerHTML = "Eat your granola bar! Yim yum!.";
+          rightBtn.innerHTML = "Eat your granola bar!";
           rightBtn.style.display = "";
         }
         if (currentSlide == 29 && knife) {
-          rightBtn.innerHTML = "Kill em all";
+          rightBtn.innerHTML = "Fight them off with your knife.";
           rightBtn.style.display = "";
         }
         if (currentSlide == 33 && knife) {
-          rightBtn.innerHTML = "Free him WITH A KNIFE!!!";
+          rightBtn.innerHTML = "Free Marlo with you knife.";
           rightBtn.style.display = "";
         }
         if (currentSlide == 6) {
@@ -257,14 +257,14 @@
 
       const storySlides = [
         [ // you see a house 0
-          "You see a house.",
+          "You wake up in an empty field and it’s cold outside. You see a house far off in the distance. Do you go in it?",
           "Go Inside",
           1,
           "Stay Outside",
           2
         ],
         [ // you are in the house 1
-          "No one is home but the fire is on.",
+          "No one is home. The hallway branches off into two directions, which way do you go?",
           "Go Left",
           3,
           "Go Right",
@@ -273,7 +273,7 @@
           5
         ],
         [ // you stayed outside 2
-          "You Froze to Death",
+          "You froze to death. Game over.",
           "Try Again",
           0,
         ],
@@ -306,7 +306,7 @@
           3,
         ],
         [ // you searched in the kitchen 7
-          "You got a knife.",
+          "You got a knife. This could be important for later.",
           "Return",
           3,
         ],
@@ -318,7 +318,7 @@
           4
         ],
         [ // you slept in the bedroom 10
-          "You slept.",
+          "You drift into a deep sleep, but are woken up by some strange noise after only an hour.",
           "Return",
           4
         ],
@@ -330,24 +330,24 @@
           13
         ],
         [ // you saw a person on the side of the road 13
-          "You see someone on the side of the road.",
+          "You see a person on the side of the road. They look distressed.",
           "Stop and talk to them",
           14
         ],
         [ // they also woke up in the middle of the field 14
-          "They claimed to have also woken up suddenly in the middle of the field.",
+          "The person’s name is Marlo. He explains to you that he also woke up in the middle of the field with no memory of how he got there. Do you want to give him a ride?",
           "Drive on without them",
           15,
           "Let him in",
           16,
         ],
         [ // you left the dude in the dust lol 15
-          "You left the guy behind, but you crashed into a deer and DIED!!",
-          "Game Over",
+          "A deer sprints into the middle of the road. You veer off to avoid it but you crash the car fatally. Game Over.",
+          "Try Again",
           0
         ],
         [ // you pulled over for the guy 16
-          "You pulled over for the guy. He tells you to watch out for deer. You see one and let it cross.",
+          "Marlo warns you that a deer is incoming and you stop just in time to let it cross.",
           "Continue",
           20
         ],
@@ -358,7 +358,7 @@
         [
         ],
         [ // you ran out of gas 20
-          "You ran out of gas. You see a light in the distance and assume that it is a gas station. Go towards it?",
+          "Then, you see a sign that says WOODBERRY 75 MI AWAY. However, just as you pass that sign, you run out of gas. You and Marlo see a light far off into the distance. It could be a gas station. What do you do?Then, you see a sign that says WOODBERRY 75 MI AWAY. However, just as you pass that sign, you run out of gas. You and Marlo see a light far off into the distance. It could be a gas station. Do you walk towards it?",
           "Yes",
           24,
           "No",
@@ -367,95 +367,95 @@
         [
         ],
         [ // you do not go towards the gas station light 22
-          "You do not go towards the light. You start levitating and die. Lol.",
-          "Game Over",
+          "You and Marlo both start to slowly levitate off the ground. You feel yourself start to drift off and close your eyes. Game over.",
+          "Try Again",
           0
         ],
         [
         ],
         [ // the light disappears 24
-          "You go towards the light but it disappears. Your stomach starts rumbling",
+          "You go towards the light but it disappears. Your stomach starts rumbling.",
           "Continue walking",
           25,
         ],
         [ // you pass out and die 25
-          "You died of hunger!!! lol!!",
-          "Game Over",
+          "You don’t have the energy to go back when you realize you should’ve eaten back at the house. Game over.",
+          "Try Again",
           0
         ],
         [ // you didn't die because you were not hungry 26
-          "You continue walking and eat your granola!!!",
+          "You continue walking and eat your granola bar.",
           "Continue",
           27,
         ],
         [ // you start walking 27
-          "You see an ominous thing flying over you",
+          "You make your way towards the supposed gas station, but then the light lifts off the ground and starts flying towards you. You duck out of fear and when you get up, the light is gone.",
           "Continue",
           29,
         ],
         [ 
         ],
         [ // creatures appear in front 29
-          "Creatures appear in front of you. Oh no",
+          "You go back to the car to check on Marlo, but he’s gone. Then, you notice some strange creatures in front of you. Terrified, you realize they must be aliens.",
           "Run away",
           32,
         ],
         [ // you fight them off (knife) 30
-          "You fight off the aliens bu thtey overpower u and  u get abducted!!!!!!!!",
+          "You are able to defeat all of the aliens. However, you start to levitate and drift off into a deep sleep.",
           "Continue",
           33
         ],
         [
         ],
         [ // you run away from the aliens!!!!!! 32
-          "You tried running away but got abducted and you start levitating",
+          "You tried running away, you start to levitate and drift off into a deep sleep.",
           "Continue",
           33,
         ],
         [ // you wake up in a ufo and see your friend 33
-          "You wake up in a ufo and see your friend but he's trapped!",
+          "When you wake up, you are in a strange, bright ship. In front of you, Marlo is tied up and is also asleep.",
           "Try to get him out without a knife",
           36,
         ],
         [
         ],
         [ // you free him with your knife 35
-          "You free your friend with the kinfe. You break into the control room and fight off the aliens flying the ship!!",
+          "You free Marlo with the kinfe. You break into the control room and fight off the aliens flying the ship!",
           "Continue",
           38
         ],
         [ // you fail to free your friend more aliens come in 36
-          "More aliens come in as you fail to free your friend.",
+          "More aliens come in. You don't have time to save Marlo.",
           "Run",
           39
         ],
         [
         ],
         [ // land safely good ending 38
-          "You won yay",
-          "Eat",
+          "You and Marlo are able to land the ship safely! Congratulations!",
+          "Play Again",
           0,
         ],
         [ // they kill your friend 39
-          "As you run you watch the aliens kill your friend.",
+          "As you run you watch the aliens kill Marlo.",
           "Fight off the aliens",
           40,
           "Continue runnning",
           42,
         ],
         [ // you kill some aliens after they kill your friend 40
-          "You punch some aliens and run to the control room as they overwhelm you.",
+          "You keep fighting some aliens and run to the control room as they overwhelm you.",
           "Try to take control of the ship",
           41
         ],
         [ // crash the ufo and you survive meh ending 41
-          "You try to take control of the ship, but the you accidentally crash while fighting the aliens. The ufo crashed but you lived",
-          "Game over (mid ending)",
+          "You try to take control of the ship, but then you accidentally crash while fighting the aliens. However, you're able to escape the ship.",
+          "Play Again",
           0
         ],
         [ // try to control ship they kill you 42
-          "You run into the control room. The aliens quickly overpower you and kill you",
-          "L",
+          "You run into the control room. The aliens quickly overpower you and kill you. Game Over.",
+          "Play Again",
           0
         ]
       ]
