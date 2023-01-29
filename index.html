@@ -8,12 +8,410 @@
     <link rel="stylesheet" href="./style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Falling</title>
-</head>
-<body id="intro">
-
-  <h1>Into the Unknown: A Choose Your Own Adventure</h1>
-  <p class="fall"><a href="./story.html">WAKE UP!</a></p>
-  
-</body>
 </html>
+    <title>Into the Unknown</title>
+  </head>
+  <body>
+    <h1>Into the Unknown: A Choose Your Own Adventure</h1>
+    <p id="story">You wake in an empty grass field and a house sits in the distance. Enter the house?</p>
+    <button id="left">Yes</button>
+    <button id="right">No</button>
+    <button id="righter"></button>
+
+    <script>
+      const story = document.querySelector("#story");
+      const leftBtn = document.querySelector("#left");
+      const rightBtn = document.querySelector("#right");
+      const righterBtn = document.querySelector("#righter");
+      let currentSlide = 0;
+      let granola = false;
+      let knife = false;
+      let keys = false;
+
+      leftBtn.addEventListener("click", function() {
+        if (currentSlide == 0) {
+          granola = false;
+          storySlides[6][0] = "You ate some beans. You even took a granola bar with you!";
+          knife = false;
+          storySlides[7][0] = "You got a knife."
+          keys = false;
+          storySlides[9][0] = "You found a set of car keys."
+        }
+        currentSlide = storySlides[currentSlide][2];
+        slideData = storySlides[currentSlide];
+        story.innerHTML = slideData[0];
+        leftBtn.innerHTML = slideData[1];
+        rightBtn.innerHTML = "";
+        righterBtn.innerHTML = "";
+        if (slideData.length > 3) {
+          rightBtn.innerHTML = slideData[3];
+        }
+        if (slideData.length > 5){
+          righterBtn.innerHTML = slideData[5];
+        }
+        if (currentSlide == 5 && keys)
+          rightBtn.innerHTML = "Use your car keys to unlock the car."
+        if (currentSlide == 24 && granola)
+          rightBtn.innerHTML = "Eat your granola bar! Yim yum!."
+        if (currentSlide == 29 && knife)
+          rightBtn.innerHTML = "Kill em all"
+        if (currentSlide == 33 && knife)
+          rightBtn.innerHTML = "Free him WITH A KNIFE!!!"
+        if (currentSlide == 6) {
+          granola = true;
+          storySlides[currentSlide][0] = "You already took the granola bar.";
+        }
+        else if (currentSlide == 7) {
+          knife = true;
+          storySlides[currentSlide][0] = "You already took the knife.";
+        }
+        else if (currentSlide == 9) {
+          keys = true;
+          storySlides[currentSlide][0] = "You already took the keys.";
+        }
+
+      });
+
+      rightBtn.addEventListener("click", function() {
+        if (currentSlide == 0) {
+          granola = false;
+          storySlides[6][0] = "You ate some beans. You even took a granola bar with you!";
+          knife = false;
+          storySlides[7][0] = "You got a knife."
+          keys = false;
+          storySlides[9][0] = "You found a set of car keys."
+        }
+        if (storySlides[currentSlide].length > 3) {
+          currentSlide = storySlides[currentSlide][4];
+        }
+        else if (currentSlide == 5 && keys)
+          currentSlide = 12;
+        else if (currentSlide == 24 && granola)
+          currentSlide = 26;
+        else if (currentSlide == 29 && knife)
+          currentSlide = 30;
+        else if (currentSlide == 33 && knife)
+          currentSlide = 35;
+        slideData = storySlides[currentSlide];
+        story.innerHTML = slideData[0];
+        leftBtn.innerHTML = slideData[1];
+        rightBtn.innerHTML = "";
+        righterBtn.innerHTML = "";
+        if (slideData.length > 3) {
+          rightBtn.innerHTML = slideData[3];
+        }
+        if (slideData.length > 5){
+          righterBtn.innerHTML = slideData[5];
+        }
+        if (currentSlide == 5 && keys)
+          rightBtn.innerHTML = "Use your car keys to unlock the car."
+        if (currentSlide == 24 && granola)
+          rightBtn.innerHTML = "Eat your granola bar! Yim yum!."
+        if (currentSlide == 29 && knife)
+          rightBtn.innerHTML = "Kill em all"
+        if (currentSlide == 33 && knife)
+          rightBtn.innerHTML = "Free him WITH A KNIFE!!!"
+        if (currentSlide == 6) {
+          granola = true;
+          storySlides[currentSlide][0] = "You already took the granola bar.";
+        }
+        else if (currentSlide == 7) {
+          knife = true;
+          storySlides[currentSlide][0] = "You already took the knife.";
+        }
+        else if (currentSlide == 9) {
+          keys = true;
+          storySlides[currentSlide][0] = "You already took the keys.";
+        }
+      });
+
+      righterBtn.addEventListener("click", function() {
+        if (currentSlide == 0) {
+          granola = false;
+          storySlides[6][0] = "You ate some beans. You even took a granola bar with you!";
+          knife = false;
+          storySlides[7][0] = "You got a knife."
+          keys = false;
+          storySlides[9][0] = "You found a set of car keys."
+        }
+        if (storySlides[currentSlide].length > 5) {
+          currentSlide = storySlides[currentSlide][6];
+        }
+        slideData = storySlides[currentSlide];
+        story.innerHTML = slideData[0];
+        leftBtn.innerHTML = slideData[1];
+        rightBtn.innerHTML = "";
+        righterBtn.innerHTML = "";
+        if (slideData.length > 3) {
+          rightBtn.innerHTML = slideData[3];
+        }
+        if (slideData.length > 5){
+          righterBtn.innerHTML = slideData[5];
+        }
+        if (currentSlide == 5 && keys)
+          rightBtn.innerHTML = "Use your car keys to unlock the car."
+        if (currentSlide == 24 && granola)
+          rightBtn.innerHTML = "Eat your granola bar! Yim yum!."
+        if (currentSlide == 29 && knife)
+          rightBtn.innerHTML = "Kill em all"
+        if (currentSlide == 33 && knife)
+          rightBtn.innerHTML = "Free him WITH A KNIFE!!!"
+        if (currentSlide == 6) {
+          granola = true;
+          storySlides[currentSlide][0] = "You already took the granola bar.";
+        }
+        else if (currentSlide == 7) {
+          knife = true;
+          storySlides[currentSlide][0] = "You already took the knife.";
+        }
+        else if (currentSlide == 9) {
+          keys = true;
+          storySlides[currentSlide][0] = "You already took the keys.";
+        }
+
+      });
+      /*
+
+      leftBtn.addEventListener("click", function() {
+        story.innerHTML = "You have chosen to go left. You encounter a dragon. Do you want to fight or run?";
+        leftBtn.innerHTML = "Fight";
+        rightBtn.innerHTML = "Run";
+
+        leftBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to fight the dragon. The dragon breathes fire and you die.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+
+        rightBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to run from the dragon. You successfully escape and find a treasure.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+      });
+
+      rightBtn.addEventListener("click", function() {
+        story.innerHTML = "You have chosen to go right. You find a treasure chest. Do you want to open it or leave it?";
+        leftBtn.innerHTML = "Open";
+        rightBtn.innerHTML = "Leave";
+
+        leftBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to open the treasure chest. You find a valuable diamond inside.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+
+        rightBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to leave the treasure chest. You continue on your journey without it.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+      });
+      */
+
+      const storySlides = [
+        [ // you see a house 0
+          "You see a house.",
+          "Go Inside",
+          1,
+          "Stay Outside",
+          2
+        ],
+        [ // you are in the house 1
+          "No one is home but the fire is on.",
+          "Go Left",
+          3,
+          "Go Right",
+          4,
+          "Go Outside",
+          5
+        ],
+        [ // you stayed outside 2
+          "You Froze to Death",
+          "Try Again",
+          0,
+        ],
+        [ // you went left in the house (into kitchen) 3
+          "You entered the kitchen.",
+          "Eat",
+          6,
+          "Search",
+          7,
+          "Go Back",
+          1
+        ],
+        [ // you went right in the house (into bedroom) 4
+          "You entered the bedroom.",
+          "Search",
+          9,
+          "Sleep",
+          10,
+          "Go Back",
+          1
+        ],
+        [ // you went outside of house (to car) 5
+          "You look outside of the house and see a locked car.",
+          "Go Back",
+          1,
+        ],
+        [ // you ate in the kitchen 6
+          "You ate some beans. You even took a granola bar with you!",
+          "Return",
+          3,
+        ],
+        [ // you searched in the kitchen 7
+          "You got a knife.",
+          "Return",
+          3,
+        ],
+        [
+        ],
+        [ // you search the bedroom 9
+          "You found a set of car keys.",
+          "Return",
+          4
+        ],
+        [ // you slept in the bedroom 10
+          "You slept.",
+          "Return",
+          4
+        ],
+        [
+        ],
+        [ // you drove the car away 12
+          "You unlocked the car.",
+          "Drive Away",
+          13
+        ],
+        [ // you saw a person on the side of the road 13
+          "You see someone on the side of the road.",
+          "Stop and talk to them",
+          14
+        ],
+        [ // they also woke up in the middle of the field 14
+          "They claimed to have also woken up suddenly in the middle of the field.",
+          "Drive on without them",
+          15,
+          "Let him in",
+          16,
+        ],
+        [ // you left the dude in the dust lol 15
+          "You left the guy behind, but you crashed into a deer and DIED!!",
+          "Game Over",
+          0
+        ],
+        [ // you pulled over for the guy 16
+          "You pulled over for the guy. He tells you to watch out for deer. You see one and let it cross.",
+          "Continue",
+          20
+        ],
+        [
+        ],
+        [
+        ],
+        [
+        ],
+        [ // you ran out of gas 20
+          "You ran out of gas. You see a light in the distance and assume that it is a gas station. Go towards it?",
+          "Yes",
+          24,
+          "No",
+          22,
+        ],
+        [
+        ],
+        [ // you do not go towards the gas station light 22
+          "You do not go towards the light. You start levitating and die. Lol.",
+          "Game Over",
+          0
+        ],
+        [
+        ],
+        [ // the light disappears 24
+          "You go towards the light but it disappears. Your stomach starts rumbling",
+          "Continue walking",
+          25,
+        ],
+        [ // you pass out and die 25
+          "You died of hunger!!! lol!!",
+          "Game Over",
+          0
+        ],
+        [ // you didn't die because you were not hungry 26
+          "You continue walking and eat your granola!!!",
+          "Continue",
+          27,
+        ],
+        [ // you start walking 27
+          "You see an ominous thing flying over you",
+          "Continue",
+          29,
+        ],
+        [ 
+        ],
+        [ // creatures appear in front 29
+          "Creatures appear in front of you. Oh no",
+          "Run away",
+          32,
+        ],
+        [ // you fight them off (knife) 30
+          "You fight off the aliens bu thtey overpower u and  u get abducted!!!!!!!!",
+          "Continue",
+          33
+        ],
+        [
+        ],
+        [ // you run away from the aliens!!!!!! 32
+          "You tried running away but got abducted and you start levitating",
+          "Continue",
+          33,
+        ],
+        [ // you wake up in a ufo and see your friend 33
+          "You wake up in a ufo and see your friend but he's trapped!",
+          "Try to get him out without a knife",
+          36,
+        ],
+        [
+        ],
+        [ // you free him with your knife 35
+          "You free your friend with the kinfe. You break into the control room and fight off the aliens flying the ship!!",
+          "Continue",
+          38
+        ],
+        [ // you fail to free your friend more aliens come in 36
+          "More aliens come in as you fail to free your friend.",
+          "Run",
+          39
+        ],
+        [
+        ],
+        [ // land safely good ending 38
+          "You won yay",
+          "Eat",
+          0,
+        ],
+        [ // they kill your friend 39
+          "As you run you watch the aliens kill your friend.",
+          "Fight off the aliens",
+          40,
+          "Continue runnning",
+          42,
+        ],
+        [ // you kill some aliens after they kill your friend 40
+          "You punch some aliens and run to the control room as they overwhelm you.",
+          "Try to take control of the ship",
+          41
+        ],
+        [ // crash the ufo and you survive meh ending 41
+          "You try to take control of the ship, but the you accidentally crash while fighting the aliens. The ufo crashed but you lived",
+          "Game over (mid ending)",
+          0
+        ],
+        [ // try to control ship they kill you 42
+          "You run into the control room. The aliens quickly overpower you and kill you",
+          "L",
+          0
+        ]
+      ]
+    </script>
+  </body>
