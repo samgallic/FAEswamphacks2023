@@ -15,6 +15,13 @@
     <button id="left">Yes</button>
     <button id="right">No</button>
     <button id="righter"></button>
+    <style>
+      body {
+        background-image: url('./img/You-see-a-house.jpg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+      }
+      </style>
 
     <script>
       const story = document.querySelector("#story");
@@ -25,6 +32,12 @@
       let granola = false;
       let knife = false;
       let keys = false;
+      let image_path = "url('./img/Inside-of-house-hallway.jpg')";
+
+      function setBackground() {
+        document.body.style.backgroundImage = image_path
+        document.body.style.backgroundPosition = "top center";
+      }
 
       leftBtn.addEventListener("click", function() {
         if (currentSlide == 0) {
@@ -37,10 +50,13 @@
         }
         currentSlide = storySlides[currentSlide][2];
         slideData = storySlides[currentSlide];
+        image_path = imageSlides[currentSlide];
+        setBackground();
         story.innerHTML = slideData[0];
         leftBtn.innerHTML = slideData[1];
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
+        
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
         }
@@ -81,7 +97,10 @@
         }
         if (storySlides[currentSlide].length > 3) {
           currentSlide = storySlides[currentSlide][4];
+          image_path = imageSlides[currentSlide];
+          setBackground();
         }
+
         else if (currentSlide == 5 && keys)
           currentSlide = 12;
         else if (currentSlide == 24 && granola)
@@ -95,6 +114,7 @@
         leftBtn.innerHTML = slideData[1];
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
+
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
         }
@@ -134,12 +154,16 @@
         }
         if (storySlides[currentSlide].length > 5) {
           currentSlide = storySlides[currentSlide][6];
+          image_path = imageSlides[currentSlide];
+          setBackground();
         }
+
         slideData = storySlides[currentSlide];
         story.innerHTML = slideData[0];
         leftBtn.innerHTML = slideData[1];
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
+        
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
         }
@@ -168,44 +192,6 @@
         }
 
       });
-      /*
-
-      leftBtn.addEventListener("click", function() {
-        story.innerHTML = "You have chosen to go left. You encounter a dragon. Do you want to fight or run?";
-        leftBtn.innerHTML = "Fight";
-        rightBtn.innerHTML = "Run";
-
-        leftBtn.addEventListener("click", function() {
-          story.innerHTML = "You have decided to fight the dragon. The dragon breathes fire and you die.";
-          leftBtn.style.display = "none";
-          rightBtn.style.display = "none";
-        });
-
-        rightBtn.addEventListener("click", function() {
-          story.innerHTML = "You have decided to run from the dragon. You successfully escape and find a treasure.";
-          leftBtn.style.display = "none";
-          rightBtn.style.display = "none";
-        });
-      });
-
-      rightBtn.addEventListener("click", function() {
-        story.innerHTML = "You have chosen to go right. You find a treasure chest. Do you want to open it or leave it?";
-        leftBtn.innerHTML = "Open";
-        rightBtn.innerHTML = "Leave";
-
-        leftBtn.addEventListener("click", function() {
-          story.innerHTML = "You have decided to open the treasure chest. You find a valuable diamond inside.";
-          leftBtn.style.display = "none";
-          rightBtn.style.display = "none";
-        });
-
-        rightBtn.addEventListener("click", function() {
-          story.innerHTML = "You have decided to leave the treasure chest. You continue on your journey without it.";
-          leftBtn.style.display = "none";
-          rightBtn.style.display = "none";
-        });
-      });
-      */
 
       const storySlides = [
         [ // you see a house 0
@@ -410,6 +396,52 @@
           "L",
           0
         ]
+      ]
+      
+      const imageSlides = [
+        ["url('./img/You-see-a-house.jpg')"],  //0,
+        ["url('./img/Inside-of-house-hallway.jpg')"], //1
+        [], //2
+        ["url('./img/Night-Kitchen.jpg')"], //3
+        ["url('./img/Night-bedroom.jpg')"], //4
+        ["url('./img/locked-car-parked.jpg')"], //5
+        ["url('./img/Night-Kitchen.jpg')"], //6
+        ["url('./img/Night-Kitchen.jpg')"], //7
+        [], //8
+        ["url('./img/Night-bedroom.jpg')"], //9
+        ["url('./img/Sleep-in-Bedroom.jpg')"], //10
+        [], //11
+        ["url('./img/locked-car-parked.jpg')"], //12
+        ["url('./img/You-see-a-person-on-the-road.jpg')"], //13
+        ["url('./img/You-see-a-person-on-the-road.jpg')"], //14
+        ["url('./img/See-a-deer-and-rear-off-and-game-end.JPG')"], //15
+        ["url('./img/Talking-to-the person-and-figuring-out-to-be-careful-of-deers.jpg')"], //16
+        [], //17
+        [], //18
+        [], //19
+        ["url('./img/See-a-light-in-a-distance.jpg')"], //20
+        [], //21
+        ["url('./img/Start-Levitating-and die.jpg')"], //22
+        [], //23
+        ["url('./img/light-disappears.jpg')"], //24
+        ["url('./img/game_over.jpg')"], //25
+        ["url('./img/Start Walking in the-field.jpg')"], //26
+        ["url('./img/ufo-sighting.jpg')"], //27
+        [], //28
+        ["url('./img/Alien-appear-in-front-of-you.jpg')"], //29
+        ["url('./img/Alien-abducts-you.jpg')"], //30
+        [], //31
+        ["url('./img/Alien-abducts-you.jpg')"], //32
+        ["url('./img/spaceship-interior.jpg')"], //33
+        [], //34
+        ["url('./img/spaceship-interior-blue-light.jpg')"], //35
+        ["url('./img/spaceship-interior.jpg')"], //36
+        [], //37
+        ["url('./img/Land-safely-you-live-happi-and-Meh-ending.jpg')"], //38
+        ["url('./img/spaceship-interior.jpg')"], //39
+        ["url('./img/spaceship-interior-blue-light.jpg')"], //40
+        ["url('./img/spaceship-interior-blue-light.jpg')"], //41
+        ["url('./img/spaceship-interior-blue-light.jpg')"], //42
       ]
     </script>
   </body>
