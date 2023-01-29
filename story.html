@@ -35,12 +35,19 @@
           keys = false;
           storySlides[9][0] = "You found a set of car keys."
         }
+
         currentSlide = storySlides[currentSlide][2];
+
+        // Dead
+        if (currentSlide == 0)
+          window.location.replace("./index.html")
+
         slideData = storySlides[currentSlide];
         story.innerHTML = slideData[0];
         leftBtn.innerHTML = slideData[1];
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
+
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
         }
@@ -90,11 +97,13 @@
           currentSlide = 30;
         else if (currentSlide == 33 && knife)
           currentSlide = 35;
+
         slideData = storySlides[currentSlide];
         story.innerHTML = slideData[0];
         leftBtn.innerHTML = slideData[1];
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
+
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
         }
@@ -135,11 +144,13 @@
         if (storySlides[currentSlide].length > 5) {
           currentSlide = storySlides[currentSlide][6];
         }
+
         slideData = storySlides[currentSlide];
         story.innerHTML = slideData[0];
         leftBtn.innerHTML = slideData[1];
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
+
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
         }
@@ -168,44 +179,6 @@
         }
 
       });
-      /*
-
-      leftBtn.addEventListener("click", function() {
-        story.innerHTML = "You have chosen to go left. You encounter a dragon. Do you want to fight or run?";
-        leftBtn.innerHTML = "Fight";
-        rightBtn.innerHTML = "Run";
-
-        leftBtn.addEventListener("click", function() {
-          story.innerHTML = "You have decided to fight the dragon. The dragon breathes fire and you die.";
-          leftBtn.style.display = "none";
-          rightBtn.style.display = "none";
-        });
-
-        rightBtn.addEventListener("click", function() {
-          story.innerHTML = "You have decided to run from the dragon. You successfully escape and find a treasure.";
-          leftBtn.style.display = "none";
-          rightBtn.style.display = "none";
-        });
-      });
-
-      rightBtn.addEventListener("click", function() {
-        story.innerHTML = "You have chosen to go right. You find a treasure chest. Do you want to open it or leave it?";
-        leftBtn.innerHTML = "Open";
-        rightBtn.innerHTML = "Leave";
-
-        leftBtn.addEventListener("click", function() {
-          story.innerHTML = "You have decided to open the treasure chest. You find a valuable diamond inside.";
-          leftBtn.style.display = "none";
-          rightBtn.style.display = "none";
-        });
-
-        rightBtn.addEventListener("click", function() {
-          story.innerHTML = "You have decided to leave the treasure chest. You continue on your journey without it.";
-          leftBtn.style.display = "none";
-          rightBtn.style.display = "none";
-        });
-      });
-      */
 
       const storySlides = [
         [ // you see a house 0
