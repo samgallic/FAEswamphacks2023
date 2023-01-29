@@ -11,9 +11,9 @@
     <title>Into the Unknown</title>
   </head>
   <body>
-    <p id="story">You wake in an empty grass field and a house sits in the distance. Enter the house?</p>
-    <button id="left">Yes</button>
-    <button id="right">No</button>
+    <p id="story">You see a house.</p>
+    <button id="left">Go Inside</button>
+    <button id="right">Stay Outside</button>
     <button id="righter"></button>
     <style>
       body {
@@ -37,7 +37,10 @@
       function setBackground() {
         document.body.style.backgroundImage = image_path
         document.body.style.backgroundPosition = "top center";
-      }     
+      }
+      
+      if (currentSlide == 0)
+        righterBtn.style.display = "none";
 
       leftBtn.addEventListener("click", function() {
         if (currentSlide == 0) {
