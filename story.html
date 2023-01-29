@@ -48,7 +48,13 @@
           keys = false;
           storySlides[9][0] = "You found a set of car keys."
         }
+
         currentSlide = storySlides[currentSlide][2];
+
+        // Dead
+        if (currentSlide == 0)
+          window.location.replace("./index.html")
+
         slideData = storySlides[currentSlide];
         image_path = imageSlides[currentSlide];
         setBackground();
@@ -56,7 +62,7 @@
         leftBtn.innerHTML = slideData[1];
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
-        
+
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
         }
@@ -109,6 +115,7 @@
           currentSlide = 30;
         else if (currentSlide == 33 && knife)
           currentSlide = 35;
+
         slideData = storySlides[currentSlide];
         story.innerHTML = slideData[0];
         leftBtn.innerHTML = slideData[1];
@@ -163,7 +170,7 @@
         leftBtn.innerHTML = slideData[1];
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
-        
+
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
         }
