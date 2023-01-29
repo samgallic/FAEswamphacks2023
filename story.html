@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Into the Unknown</title>
+  </head>
+  <body>
+    <p id="story">You wake in an empty grass field and a house sits in the distance. Enter the house?</p>
+    <button id="left">Yes</button>
+    <button id="right">No</button>
+
+    <script>
+      const story = document.querySelector("#story");
+      const leftBtn = document.querySelector("#left");
+      const rightBtn = document.querySelector("#right");
+
+      leftBtn.addEventListener("click", function() {
+        story.innerHTML = "You have chosen to go left. You encounter a dragon. Do you want to fight or run?";
+        leftBtn.innerHTML = "Fight";
+        rightBtn.innerHTML = "Run";
+
+        leftBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to fight the dragon. The dragon breathes fire and you die.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+
+        rightBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to run from the dragon. You successfully escape and find a treasure.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+      });
+
+      rightBtn.addEventListener("click", function() {
+        story.innerHTML = "You have chosen to go right. You find a treasure chest. Do you want to open it or leave it?";
+        leftBtn.innerHTML = "Open";
+        rightBtn.innerHTML = "Leave";
+
+        leftBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to open the treasure chest. You find a valuable diamond inside.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+
+        rightBtn.addEventListener("click", function() {
+          story.innerHTML = "You have decided to leave the treasure chest. You continue on your journey without it.";
+          leftBtn.style.display = "none";
+          rightBtn.style.display = "none";
+        });
+      });
+    </script>
+  </body>
