@@ -37,13 +37,7 @@
       function setBackground() {
         document.body.style.backgroundImage = image_path
         document.body.style.backgroundPosition = "top center";
-      }
-
-      // Do not show button if button is empty
-      if ((rightBtn.value == "") && (currentSlide != 0))
-        rightBtn.style.display = "none";
-      if (righterBtn.value == "")
-        righterBtn.style.display = "none";        
+      }     
 
       leftBtn.addEventListener("click", function() {
         if (currentSlide == 0) {
@@ -70,6 +64,12 @@
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
 
+        // Do not show button if button is empty
+        if ((rightBtn.value == "") && (currentSlide != 0))
+          rightBtn.style.display = "none";
+        if (righterBtn.value == "")
+          righterBtn.style.display = "none";   
+
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
           rightBtn.style.display = "";
@@ -79,14 +79,22 @@
           righterBtn.style.display = "";
         }
 
-        if (currentSlide == 5 && keys)
+        if (currentSlide == 5 && keys) {
           rightBtn.innerHTML = "Use your car keys to unlock the car.";
-        if (currentSlide == 24 && granola)
+          rightBtn.style.display = "";
+        }
+        if (currentSlide == 24 && granola) {
           rightBtn.innerHTML = "Eat your granola bar! Yim yum!.";
-        if (currentSlide == 29 && knife)
-          rightBtn.innerHTML = "Kill em all"
-        if (currentSlide == 33 && knife)
+          rightBtn.style.display = "";
+        }
+        if (currentSlide == 29 && knife) {
+          rightBtn.innerHTML = "Kill em all";
+          rightBtn.style.display = "";
+        }
+        if (currentSlide == 33 && knife) {
           rightBtn.innerHTML = "Free him WITH A KNIFE!!!";
+          rightBtn.style.display = "";
+        }
         if (currentSlide == 6) {
           granola = true;
           storySlides[currentSlide][0] = "You already took the granola bar.";
@@ -132,23 +140,37 @@
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
 
+        // Do not show button if button is empty
+        if ((rightBtn.value == "") && (currentSlide != 0))
+          rightBtn.style.display = "none";
+        if (righterBtn.value == "")
+          righterBtn.style.display = "none";   
+
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
-          righterBtn.style.display = "";
+          rightBtn.style.display = "";
         }
         if (slideData.length > 5){
           righterBtn.innerHTML = slideData[5];
           righterBtn.style.display = "";
         }
 
-        if (currentSlide == 5 && keys)
-          rightBtn.innerHTML = "Use your car keys to unlock the car."
-        if (currentSlide == 24 && granola)
-          rightBtn.innerHTML = "Eat your granola bar! Yim yum!."
-        if (currentSlide == 29 && knife)
-          rightBtn.innerHTML = "Kill em all"
-        if (currentSlide == 33 && knife)
-          rightBtn.innerHTML = "Free him WITH A KNIFE!!!"
+        if (currentSlide == 5 && keys) {
+          rightBtn.innerHTML = "Use your car keys to unlock the car.";
+          rightBtn.style.display = "";
+        }
+        if (currentSlide == 24 && granola) {
+          rightBtn.innerHTML = "Eat your granola bar! Yim yum!.";
+          rightBtn.style.display = "";
+        }
+        if (currentSlide == 29 && knife) {
+          rightBtn.innerHTML = "Kill em all";
+          rightBtn.style.display = "";
+        }
+        if (currentSlide == 33 && knife) {
+          rightBtn.innerHTML = "Free him WITH A KNIFE!!!";
+          rightBtn.style.display = "";
+        }
         if (currentSlide == 6) {
           granola = true;
           storySlides[currentSlide][0] = "You already took the granola bar.";
@@ -184,6 +206,12 @@
         rightBtn.innerHTML = "";
         righterBtn.innerHTML = "";
 
+        // Do not show button if button is empty
+        if ((rightBtn.value == "") && (currentSlide != 0))
+          rightBtn.style.display = "none";
+        if (righterBtn.value == "")
+          righterBtn.style.display = "none";   
+
         if (slideData.length > 3) {
           rightBtn.innerHTML = slideData[3];
           rightBtn.style.display = "";
@@ -193,14 +221,22 @@
           righterBtn.style.display = "";
         }
 
-        if (currentSlide == 5 && keys)
-          rightBtn.innerHTML = "Use your car keys to unlock the car."
-        if (currentSlide == 24 && granola)
-          rightBtn.innerHTML = "Eat your granola bar! Yim yum!."
-        if (currentSlide == 29 && knife)
-          rightBtn.innerHTML = "Kill em all"
-        if (currentSlide == 33 && knife)
-          rightBtn.innerHTML = "Free him WITH A KNIFE!!!"
+        if (currentSlide == 5 && keys) {
+          rightBtn.innerHTML = "Use your car keys to unlock the car.";
+          rightBtn.style.display = "";
+        }
+        if (currentSlide == 24 && granola) {
+          rightBtn.innerHTML = "Eat your granola bar! Yim yum!.";
+          rightBtn.style.display = "";
+        }
+        if (currentSlide == 29 && knife) {
+          rightBtn.innerHTML = "Kill em all";
+          rightBtn.style.display = "";
+        }
+        if (currentSlide == 33 && knife) {
+          rightBtn.innerHTML = "Free him WITH A KNIFE!!!";
+          rightBtn.style.display = "";
+        }
         if (currentSlide == 6) {
           granola = true;
           storySlides[currentSlide][0] = "You already took the granola bar.";
