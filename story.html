@@ -38,7 +38,7 @@
 
         currentSlide = storySlides[currentSlide][2];
 
-        // Dead
+        // Redirect to index if you die
         if (currentSlide == 0)
           window.location.replace("./index.html")
 
@@ -54,6 +54,9 @@
         if (slideData.length > 5){
           righterBtn.innerHTML = slideData[5];
         }
+
+        
+
         if (currentSlide == 5 && keys)
           rightBtn.innerHTML = "Use your car keys to unlock the car."
         if (currentSlide == 24 && granola)
